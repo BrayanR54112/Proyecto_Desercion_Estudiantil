@@ -1,4 +1,4 @@
-# EduPredictAI - Predicción de Deserción Escolar
+# Predicción de Deserción Escolar
 
 Aplicación web full-stack basada en Machine Learning para predecir si un estudiante tiene riesgo de deserción universitaria.
 
@@ -44,14 +44,4 @@ npm install
 npm run dev
 \`\`\`
 
-## Ejecución con el Modelo Python (FastAPI)
 
-1. Ve a la carpeta \`python-backend\`:
-   \`\`\`bash
-   cd python-backend
-   pip install -r requirements.txt
-   uvicorn app:app --reload --port 8000
-   \`\`\`
-2. Configura Axios (en \`PredictionApiRepository.ts\`) para que apunte a \`http://localhost:8000/predict\`.
-
-*(Nota: En este entorno de AI Studio, la matemática e inferencia de Logistic Regression han sido replicadas en el archivo \`server.ts\` en Node para que la aplicación sea 100% funcional sin levantar el servidor de Python externamente)*.
