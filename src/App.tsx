@@ -24,7 +24,7 @@ function MainApp() {
         <div className="container mx-auto max-w-5xl flex h-16 items-center px-4 md:px-6">
           <div className="flex gap-2 items-center font-bold text-lg tracking-tight">
             <BrainCircuit className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
-            <span>IushPredict<span className="text-slate-400 font-light">AI</span></span>
+            <span>Iush Predictor <span className="text-slate-400 font-light">LLM</span></span>
           </div>
           <nav className="ml-auto flex gap-6 text-sm font-medium">
             <a href="#" className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400"><LayoutDashboard className="h-4 w-4"/> Inicio</a>

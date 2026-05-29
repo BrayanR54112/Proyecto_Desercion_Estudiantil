@@ -1,6 +1,7 @@
 import { StudentFeatures, PredictionResult } from "../domain/models";
 import { FeatureEngineeringService } from "../domain/services/FeatureEngineeringService";
 import { PredictionModel } from "../domain/services/PredictionModel";
+import { FeatureScalingService } from "../domain/services/FeatureScalingService";
 
 export class PredictStudentUseCase {
   execute(features: StudentFeatures): PredictionResult {
@@ -49,9 +50,9 @@ export class PredictStudentUseCase {
       engineered.avg_grade,
       engineered.financial_risk
     ];
-
+    const scaledFeatures = FeatureScalingService.scale(featureVector);
     // 3. Inferencia de Modelo Local
-    const probability = PredictionModel.predictProbability(featureVector);
+    const probability = PredictionModel.predictProbability(scaledFeatures);
     const prediction = probability >= 0.5 ? 1 : 0;
 
     // 4. Clasificación de Riesgo
